@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+
+    <script type="text/javascript">
+        //var id = setInterval("myFunc_1()", 1000); //1000 - миллисек (setinterval-повт бесконеч)
+        var counter = 0;
+
+        // function myFunc_1() {
+        //     counter++;
+        //     alert("Second proshlo: " + counter);
+        //     if(counter == 5)
+        //         clearInterval(id);
+        // }
+
+        function timer(){
+            counter++;
+            document.getElementById("count").innerHTML = counter;
+            setTimeout("timer()", 1000); //settimeout - вып один раз через какое то время
+        }
+    </script>
+</head>
+<body onload="timer()">
+    Second have passed <span id="count">-1</span>
+</body>
+</html>
